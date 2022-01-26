@@ -1,8 +1,15 @@
 #!/usr/bin/env bash
 set -e
 
+VERSION="0.1.0"
+
+version() {
+  echo $VERSION
+}
+
 help() {
   cat <<EOF
+VERSION: ${VERSION}
 USAGE:
   gh flow init                             Will create a new develop branch based on the main branch.
 
