@@ -2,6 +2,12 @@
 
 `gh-flow` is an extension that adds Gitflow like commands to the Github CLI, replacing the local merging of branches with Github Pull Requests. It also adds tagging and creating Github releases to the `release` command.
 
+## Installation
+
+```bash
+gh extension install takt-corp/gh-flow
+```
+
 ## Usage
 
 ```text
