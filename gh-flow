@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -e
 
-VERSION="0.1.0"
+VERSION="0.2.0"
 
 version() {
   echo $VERSION
@@ -49,10 +49,12 @@ flow_feature_publish() {
   --base develop \
   --head feature/$1 \
   --assignee "@me" \
-  --label "feature"
+  --label "feature" \
+  --draft
 }
 
 flow_feature_finish() {
+  gh pr ready feature/$1
   gh pr edit feature/$1 --add-label "ready for review"
 }
 
@@ -67,10 +69,12 @@ flow_bug_publish() {
   --base develop \
   --head bug/$1 \
   --assignee "@me" \
-  --label "bug"
+  --label "bug" \
+  --draft
 }
 
 flow_bug_finish() {
+  gh pr ready bug/$1
   gh pr edit bug/$1 --add-label "ready for review"
 }
 
@@ -85,10 +89,12 @@ flow_support_publish() {
   --base develop \
   --head support/$1 \
   --assignee "@me" \
-  --label "bug"
+  --label "support" \
+  --draft
 }
 
 flow_support_finish() {
+  gh pr ready support/$1
   gh pr edit support/$1 --add-label "ready for review"
 }
 
