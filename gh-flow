@@ -58,13 +58,13 @@ flow_feature_finish() {
   gh pr edit feature/$1 --add-label "ready for review"
 }
 
-flow_bug_start() {
+flow_hotfix_start() {
   git checkout develop && git pull
   git checkout -b bug/$1
   git push -u origin bug/$1
 }
 
-flow_bug_publish() {
+flow_hotfix_publish() {
   gh pr create \
   --base develop \
   --head bug/$1 \
@@ -73,7 +73,7 @@ flow_bug_publish() {
   --draft
 }
 
-flow_bug_finish() {
+flow_hotfix_finish() {
   gh pr ready bug/$1
   gh pr edit bug/$1 --add-label "ready for review"
 }
