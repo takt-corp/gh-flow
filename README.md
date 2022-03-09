@@ -11,21 +11,26 @@ gh extension install takt-corp/gh-flow
 ## Usage
 
 ```text
-gh flow init                             Will create a new develop branch based on the main branch.
+USAGE:
+  gh flow init                             Will create a new develop branch based on the main branch.
 
-gh flow feature start <FEATURE NAME>     Start working on a new feature. Will create a new branch called feature/<FEATURE NAME>.
-gh flow feature publish <FEATURE NAME>   Will create a new Pull Request based on the feature branch with the label "feature".
-gh flow feature finish <FEATURE NAME>    Will mark the Pull Request with a "ready for review" label.
+  gh flow feature start <FEATURE NAME>     Start working on a new feature. Will create a new branch called feature/<FEATURE NAME>.
+  gh flow feature publish <FEATURE NAME>   Will create a new Pull Request based on the feature branch with the label "feature".
+  gh flow feature merge <FEATURE NAME>     Will pull the latest develop branch and start a merge with develop.
+  gh flow feature finish <FEATURE NAME>    Will mark the Pull Request with a "ready for review" label.
 
-gh flow [bug|hotfix] start <BUG NAME>    Start working on a new bug. Will create a new branch called bug/<BUG NAME>.
-gh flow [bug|hotfix] publish <BUG NAME>  Will create a new Pull Request based on the feature branch with the label "bug".
-gh flow [bug|hotfix] finish <BUG NAME>   Will mark the Pull Request with a "ready for review" label.
+  gh flow [bug|hotfix] start <BUG NAME>    Start working on a new bug. Will create a new branch called bug/<BUG NAME>.
+  gh flow [bug|hotfix] publish <BUG NAME>  Will create a new Pull Request based on the feature branch with the label "bug".
+  gh flow [bug|hotfix] merge <BUG NAME>     Will pull the latest develop branch and start a merge with develop.
+  gh flow [bug|hotfix] finish <BUG NAME>   Will mark the Pull Request with a "ready for review" label.
 
-gh flow support start <SUPPORT NAME>     Start working on a new support case. Will create a new branch called support/<SUPPORT NAME>.
-gh flow support publish <SUPPORT NAME>   Will create a new Pull Request based on the support branch with the label "support".
-gh flow support finish <SUPPORT NAME>    Will mark the Pull Request with a "ready for review" label.
+  gh flow support start <SUPPORT NAME>     Start working on a new support case. Will create a new branch called support/<SUPPORT NAME>.
+  gh flow support publish <SUPPORT NAME>   Will create a new Pull Request based on the support branch with the label "support".
+  gh flow support merge <SUPPORT NAME>     Will pull the latest develop branch and start a merge with develop.
+  gh flow support finish <SUPPORT NAME>    Will mark the Pull Request with a "ready for review" label.
 
-gh flow release start <RELEASE NAME>     Start working on a new release. Will create a new branch called release/<RELEASE NAME>.
-gh flow release publish <RELEASE NAME>   Will create a new Pull Request based on the release branch with the label "release".
-gh flow release finish <RELEASE NAME>    Will checkout the main branch that includess the release, tag the release, and create a new release based on the tag.
+  gh flow release start <RELEASE NAME>     Start working on a new release. Will create a new branch called release/<RELEASE NAME>.
+  gh flow release publish <RELEASE NAME>   Will create a new Pull Request based on the release branch with the label "release".
+  gh flow release merge <RELEASE NAME>     Will pull the latest main branch and start a merge with main.
+  gh flow release finish <RELEASE NAME>    Will checkout the main branch that includess the release, tag the release, and create a new release based on the tag.
 ```
